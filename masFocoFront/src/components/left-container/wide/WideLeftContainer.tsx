@@ -5,11 +5,11 @@ import Login from "../../access/login/Login.js";
 import Register from "../../access/register/Register.js";
 import "./WideLeftContainer.css";
 function WideLeftContainer(props: any) {
-  const content = props.content;
+  const valor = props.valor;
   return (
     <>
       <div className="accessContainer">
-        {props.valor === "Login" ? <Login /> : props.valor === "Register" ? <Register /> : <Login />}
+        {valor === "Login" ? <Login /> : valor === "Register" ? <Register /> : <Login />}
       </div>
     </>
   )

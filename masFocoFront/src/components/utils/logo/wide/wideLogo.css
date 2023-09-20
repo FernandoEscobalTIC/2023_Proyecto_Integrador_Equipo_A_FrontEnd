@@ -5,28 +5,18 @@
     display: flex;
     justify-content: left;
     align-items: center;
+    width: 30rem;
 }
-.logo img {
-        width: clamp(1rem, 2vw, 2rem);
-        margin-left: 1.5rem;
-    }
 
-@media screen and (max-width: 768px) {
-    .logo h1{
-       display: none;
-    }
-    .logo {
-        width: 5rem;
-    }
+.logo img {
+    width: 2rem;
+    margin-left: 1.5rem;
 }
-@media screen and (min-width: 768px) {
-    .logo h1{
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-        margin-left: 1rem;
-        font-size: clamp(7.2px, 1.35vw, 18px);
-    }
-    .logo {
-        width: clamp(15rem, 30vw, 25rem);
-    }
+
+
+.logo h1 {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1rem;
+    font-size: 18px;
 }

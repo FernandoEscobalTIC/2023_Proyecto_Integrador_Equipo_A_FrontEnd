@@ -1,15 +1,24 @@
 import React from 'react';
 import "./Login.css"
+import LoginButton from '../../utils/button/LoginButton/LoginButton';
 class Login extends React.Component {
   render() {
     return (
       <div className="loginContainer">
         <h2>Login</h2>
-        <input type="text" placeholder="USER" className="textAccInp" id="userInp"/>
-        <input type="password" placeholder="PASSWORD" className="textAccInp"  />
-        <button value="Login"></button>
-        <a href="#" id="frgPass">FORGOT PASSWORD?</a>
-        <a href="#" id="frgPass">ARE YOU NOT REGISTERED?</a>
+        <div className="input-group">
+          <input type="text" name="text" className="access-input" />
+          <label className="user-label">Username</label>
+        </div>
+        <div className='passwordSection'>
+          <div className="input-group">
+            <input type="text" name="text" className="access-input" />
+            <label className="user-label">Password</label>
+          </div>
+          <a href="#" className="frgPass">Forgot password?</a>
+        </div>
+        <LoginButton color="black" width="17rem" />
+        <p className="registerLink">Not a member? <a href="#">Register NOW!</a></p>
       </div>
     );
   }

@@ -1,23 +1,30 @@
-.loginContainer{
-    font-size: 16px;
+.accessContainer{
     display: flex;
-    flex: 1 0 auto;
-    padding-bottom: 65%;
+    height: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: start;
+    width: 30rem;
     background-color: black;
     color: white;
-    height: 100%;
 }
-@media screen and (max-width: 768px) {
-    .loginContainer {
-        width: 100%;
-    }
+.registerLink{
+    font-size: 12px;
+    font-family: 'Urbanist', sans-serif;
+    text-decoration: none;
+    color: #fff;
 }
-@media screen and (min-width: 768px) {
-    .loginContainer{
-        width: clamp(15rem, 30vw, 25rem); 
-    }
-    
+.registerLink > a{
+    color: #3C85DB;
+}
+.registerLink > a:hover {
+    color: #FFF;
+}
+.frgPass:hover{
+    color: #fff;
+}
+.frgPass{
+    font-size: 12px;
+    font-family: 'Urbanist', sans-serif;
+    text-decoration: none;
+    color: #3C85DB;
 }
