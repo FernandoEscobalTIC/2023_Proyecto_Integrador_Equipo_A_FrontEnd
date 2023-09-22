@@ -2,9 +2,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import Button from '../utils/button/PageNavButton/PageNavButton';
-// @ts-ignore
-import Logo from '../utils/logo/wide/wideLogo.tsx'
-import LoginButton from '../utils/button/LoginButton/LoginButton';
+import Logo from '../utils/logo/wide/wideLogo.js'
+import LoginButton from '../utils/button/AccessButton/AccessButton';
 import './Header.css'
 
 function ElementosComunes(props: any) {
@@ -35,7 +34,7 @@ const Header = (props: any) => {
         <ElementosComunes>
           <div className='headerLinks'>
             <Button value="Home" className="active-page" />
-            <Button value="About us" className="nav-button" />
+            <Button value="About us" className="nav-button" onclick="/aboutus" />
             <Button value="Reports" className="nav-button" />
           </div>
         </ElementosComunes>
@@ -53,7 +52,7 @@ const Header = (props: any) => {
             <Button value="Reports" className="nav-button" />
           </div>
           <div className="linea"></div>
-          <LoginButton />
+          <LoginButton text="Login" color="#3C85DB" />
         </ElementosComunes>
       )
 
@@ -67,7 +66,7 @@ const Header = (props: any) => {
             <Button value="Reports" className="active-page" />
           </div>
           <div className="linea"></div>
-          <LoginButton />
+          <LoginButton text="Login" color="#3C85DB" />
         </ElementosComunes>
       )
     }

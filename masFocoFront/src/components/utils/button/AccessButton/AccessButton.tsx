@@ -1,6 +1,6 @@
-import './LoginButton.css';
+import './AccessButton.css';
 import React, { useState } from 'react';
-const LoginButton = (props: any) => {
+const AccessButton = (props: any) => {
     const [isHovered, setIsHovered] = useState(false);
     const divStyle = {
         boxShadow: isHovered
@@ -9,7 +9,7 @@ const LoginButton = (props: any) => {
         width: props.width,
     };
     return (
-        <input type="button" value="Login" className="login-button" style={divStyle} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} />
+        <input type="button" value={props.text} className="access-button" style={divStyle} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} />
     );
 }
-export default LoginButton;
+export default AccessButton;

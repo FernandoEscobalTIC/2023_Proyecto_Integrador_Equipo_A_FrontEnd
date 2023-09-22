@@ -8,8 +8,8 @@ function wideLogo() {
 
   return (
     <div className="logo">
-        <img src={logo} alt="Logo" />
-        <h1>+FOCO | EL FOCO DONDE IMPORTA</h1>
+      <img src={logo} alt="Logo" />
+      <h1><span>+FOCO </span>| EL FOCO DONDE IMPORTA</h1>
     </div>
   )
 }

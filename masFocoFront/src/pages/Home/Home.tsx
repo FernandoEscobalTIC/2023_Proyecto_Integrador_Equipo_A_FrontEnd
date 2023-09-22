@@ -5,12 +5,12 @@ import "./Home.css"
 import logo from '../../assets/logo.png'
 import React from 'react'
 import Footer from "../../components/footer/Footer";
-function Home() {
+function Home(props: any) {
   return (
     <>
       <Header page="Home" />
       <div className='homeContent'>
-        <LeftContainer />
+        <LeftContainer valor={props.leftContainer} />
         <div className='navSection'>
           <div className="navContainer">
             <div className="contentWelcome">

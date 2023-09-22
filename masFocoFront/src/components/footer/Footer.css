@@ -1,33 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@600&family=Urbanist:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-.linea-footer{
+
+.linea-footer {
     border: none;
     background-color: white;
     width: 80rem;
     height: 1px;
 }
+
 footer {
     background-color: #000;
     color: #fff;
-    display: flex;  
+    display: flex;
     grid: footer;
     flex-direction: column;
-    width: 100%;    
+    width: 100%;
     height: 13rem;
 }
+
 .footer-logo h1 {
-    margin-left: 1rem; 
+    margin-left: 1rem;
 }
-.footer-logo h1 span{
+
+.footer-logo h1 span {
     font-weight: bold;
 }
-.footer-top{
+
+.footer-top {
     display: flex;
     padding: 2rem;
     justify-content: center;
     align-items: center;
 }
-.footer-bottom{
+
+.footer-bottom {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -57,17 +63,19 @@ footer {
 .social-media {
     display: flex;
     font-size: 20px;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Encode Sans Expanded', sans-serif;
     flex-direction: row;
     align-items: center;
 }
+
 .social-media p {
     color: white;
 }
+
 .social-media a {
     display: flex;
     flex-direction: row;
-    
+
     margin-left: 1.5rem;
 }
 
@@ -79,7 +87,7 @@ footer {
 .contact-info {
     font-size: 1.2rem;
     margin-top: 0.5rem;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Encode Sans Expanded', sans-serif;
 }
 
 .contact-info a {

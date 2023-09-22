@@ -46,15 +46,15 @@
   height: 80%;
 }
 
-.contentWelcome h2 {
+.contentWelcome>h2 {
   font-family: 'Courier Prime', monospace;
   font-size: 35px;
   margin: 3rem;
   color: black;
 }
 
-.contentWelcome p {
-  font-family: 'Urbanist', sans-serif;
+.contentWelcome>p {
+  font-family: 'Encode Sans Expanded', sans-serif;
   margin: 3rem;
   font-size: var(--pFontSize);
   color: black;
@@ -80,20 +80,20 @@
   align-items: center;
 }
 
-.contentNav img {
+.contentNav>img {
   height: fit-content;
   width: fit-content;
   margin-right: 3rem;
 }
 
-.contentNav nav {
+.contentNav>nav {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   justify-content: center;
 }
 
-.contentNav nav a {
+.contentNav>nav>a {
   font-family: 'Encode Sans Expanded', sans-serif;
   font-size: 13px;
   text-decoration: none;

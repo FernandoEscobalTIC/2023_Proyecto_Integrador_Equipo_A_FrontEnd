@@ -1,4 +1,4 @@
-.login-button {
+.access-button {
   font-size: var(--pFontSize);
   display: inline-block;
   outline: 0;
@@ -16,11 +16,11 @@
   transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
 
-.login-button:hover {
+.access-button:hover {
   transform: translateY(-0.1em);
 }
 
-.login-button:active {
+.access-button:active {
   box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
   transform: translateY(0em);
 }
