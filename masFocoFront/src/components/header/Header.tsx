@@ -1,75 +1,76 @@
-/* eslint-disable react/prop-types */
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
-import Button from '../utils/button/PageNavButton/PageNavButton';
-import Logo from '../utils/logo/wide/wideLogo.js'
-import LoginButton from '../utils/button/AccessButton/AccessButton';
-import './Header.css'
+import React from "react";
+import Button from "../utils/button/PageNavButton/PageNavButton";
+import NarrowLogo from "../utils/logo/narrow/narrowLogo.js";
+import WideLogo from "../utils/logo/wide/wideLogo.js";
+import LoginButton from "../utils/button/AccessButton/AccessButton";
+import "./Header.css";
 
-function ElementosComunes(props: any) {
+interface ElementosComunesProps {
+  isWide: boolean;
+  children?: React.ReactNode;
+}
+
+interface HeaderProps {
+  page: string;
+  isWide: boolean;
+}
+
+function ElementosComunes(props: ElementosComunesProps) {
   return (
-
     <header>
-      <div className='header-logo-container'>
-        <Logo />
+      <div className="header-logo-container">
+        {props.isWide ? <WideLogo /> : <NarrowLogo />}
       </div>
-      <div className="header-container">
-        {props.children}
-
-
-      </div>
-
-
-    </header >
-
+      <div className="header-container">{props.children}</div>
+    </header>
   );
-};
+}
 
-const Header = (props: any) => {
-  const page = props.page;
+const Header = (props: HeaderProps) => {
+  const { page, isWide } = props;
+
+  const renderButtons = (activePage: string) => {
+    return (
+      <div className="header-links">
+        <Button
+          value="Home"
+          className={activePage === "Home" ? "active-page" : "nav-button"}
+        />
+        <Button
+          value="About us"
+          className={activePage === "About us" ? "active-page" : "nav-button"}
+        />
+        <Button
+          value="Reports"
+          className={activePage === "Reports" ? "active-page" : "nav-button"}
+        />
+      </div>
+    );
+  };
+
   switch (page) {
-    case "Home": {
-
+    case "Home":
       return (
-        <ElementosComunes>
-          <div className='headerLinks'>
-            <Button value="Home" className="active-page" />
-            <Button value="About us" className="nav-button" onclick="/aboutus" />
-            <Button value="Reports" className="nav-button" />
-          </div>
+        <ElementosComunes isWide={isWide}>
+          {renderButtons("Home")}
         </ElementosComunes>
-      )
-
-
-
-    }
-    case "About us": {
+      );
+    case "About us":
       return (
-        <ElementosComunes>
-          <div className='headerLinks'>
-            <Button value="Home" className="nav-button" />
-            <Button value="About us" className="active-page" />
-            <Button value="Reports" className="nav-button" />
-          </div>
+        <ElementosComunes isWide={isWide}>
+          {renderButtons("About us")}
           <div className="linea"></div>
           <LoginButton text="Login" color="#3C85DB" />
         </ElementosComunes>
-      )
-
-    }
-    case "Reports": {
+      );
+    case "Reports":
       return (
-        <ElementosComunes>
-          <div className='header-links'>
-            <Button value="Home" className="nav-button" />
-            <Button value="About us" className="nav-button" />
-            <Button value="Reports" className="active-page" />
-          </div>
-          <div className="linea"></div>
-          <LoginButton text="Login" color="#3C85DB" />
+        <ElementosComunes isWide={isWide}>
+          {renderButtons("Reports")}
         </ElementosComunes>
-      )
-    }
+      );
+    default:
+      return null; // Handle unknown page gracefully
   }
 };
 

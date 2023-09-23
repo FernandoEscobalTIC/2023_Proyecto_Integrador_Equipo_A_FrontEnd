@@ -6,9 +6,9 @@ import logo from '../../../../assets/logo.png';
 function narrowLogo() {
 
   return (
-    <div className="logo">
-        <img src={logo} alt="Logo" />
-        <h1>+FOCO</h1>
+    <div className="logo" id="narrow-logo">
+      <img src={logo} alt="Logo" />
+      <h1>+FOCO</h1>
     </div>
   )
 }

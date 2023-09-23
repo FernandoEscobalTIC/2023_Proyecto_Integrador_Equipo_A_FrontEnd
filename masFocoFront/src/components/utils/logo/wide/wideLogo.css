@@ -5,22 +5,26 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 27rem;
+    padding: 0.5rem 0 0.5rem 0;
 }
 
-.logo img {
-    width: 2rem;
+.logo>img {
+    width: 2.5rem;
     margin-left: 1.5rem;
 }
 
 
 .logo>h1 {
-    font-weight: lighter;
+    font-weight: bold;
     font-family: 'Encode Sans Expanded', sans-serif;
     margin-left: 1rem;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .logo>h1>span {
-    font-weight: bold;
+    font-weight: lighter;
+}
+
+#wide-logo {
+    width: 29rem;
 }

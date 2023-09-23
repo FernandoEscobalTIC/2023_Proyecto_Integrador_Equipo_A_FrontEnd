@@ -1,21 +1,25 @@
 .logo {
-    background-color: black;
-    height: 100%;
-    border-radius: 0 5rem 0 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+  background-color: black;
+  height: 100%;
+  border-radius: 0 5rem 0 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0.3rem 0 0.3rem 0;
 }
 
-.logo img {
-    width: clamp(1rem, 2vw, 2rem);
-    margin-left: 1.5rem;
+.logo > img {
+  width: 3rem;
+  margin-left: 1.5rem;
 }
 
-.logo h1 {
-    display: none;
+.logo > h1 {
+  font-weight: bold;
+  font-family: "Encode Sans Expanded", sans-serif;
+  margin-left: 1rem;
+  font-size: 20px;
 }
 
-.logo {
-    width: 5rem;
+#narrow-logo {
+  width: 12rem;
 }

@@ -7,9 +7,9 @@ import logo from '../../../../assets/logo.png';
 function wideLogo() {
 
   return (
-    <div className="logo">
+    <div className="logo" id='wide-logo'>
       <img src={logo} alt="Logo" />
-      <h1><span>+FOCO </span>| EL FOCO DONDE IMPORTA</h1>
+      <h1>+FOCO <span>EL FOCO DONDE IMPORTA</span></h1>
     </div>
   )
 }

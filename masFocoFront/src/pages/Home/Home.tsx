@@ -1,5 +1,5 @@
 import Header from '../../components/header/Header'
-import LeftContainer from '../../components/left-container/wide/WideLeftContainer.js'
+import LeftContainer from '../../components/left-container/LeftContainer.js'
 import "./Home.css"
 // @ts-ignore
 import logo from '../../assets/logo.png'
@@ -8,7 +8,7 @@ import Footer from "../../components/footer/Footer";
 function Home(props: any) {
   return (
     <>
-      <Header page="Home" />
+      <Header page="Home" isWide="false" />
       <div className='homeContent'>
         <LeftContainer valor={props.leftContainer} />
         <div className='navSection'>
