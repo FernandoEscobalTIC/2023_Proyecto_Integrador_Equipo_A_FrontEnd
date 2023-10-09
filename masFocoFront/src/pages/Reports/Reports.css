@@ -8,6 +8,9 @@
   grid-auto-flow: row;
   grid-column-gap: 15px;
   grid-row-gap: 15px;
+  border-top: 1px;
+  border-top-style: solid;
+  border-top-color: white;
 }
 
 .reports-content {

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../utils/button/PageNavButton/PageNavButton";
-import NarrowLogo from "../utils/logo/narrow/narrowLogo.js";
-import WideLogo from "../utils/logo/wide/wideLogo.js";
+import NarrowLogo from "../utils/logo/narrow/NarrowLogo";
+import WideLogo from "../utils/logo/wide/WideLogo.js";
 import LoginButton from "../utils/button/AccessButton/AccessButton";
 import "./Header.css";
 
@@ -33,14 +33,17 @@ const Header = (props: HeaderProps) => {
     return (
       <div className="header-links">
         <Button
+          page="/"
           value="Home"
-          className={activePage === "Home" ? "active-page" : "nav-button"}
+          className={page === "Home" ? "active-page" : "nav-button"}
         />
         <Button
+          page="/aboutus"
           value="About us"
           className={activePage === "About us" ? "active-page" : "nav-button"}
         />
         <Button
+          page="/reports"
           value="Reports"
           className={activePage === "Reports" ? "active-page" : "nav-button"}
         />

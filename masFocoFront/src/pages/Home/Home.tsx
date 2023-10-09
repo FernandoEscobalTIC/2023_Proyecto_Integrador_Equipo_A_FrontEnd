@@ -1,33 +1,30 @@
-import Header from '../../components/header/Header'
-import LeftContainer from '../../components/left-container/LeftContainer.js'
-import "./Home.css"
+import Header from "../../components/header/Header";
+import LeftContainer from "../../components/left-container/LeftContainer.js";
+import "./Home.css";
 // @ts-ignore
-import logo from '../../assets/logo.png'
-import React from 'react'
+import logo from "../../assets/logo.png";
+import React from "react";
 import Footer from "../../components/footer/Footer";
 function Home(props: any) {
   return (
     <>
-      <Header page="Home" isWide="false" />
-      <div className='homeContent'>
+      <Header page="Home" isWide={true} />
+      <div className="homeContent">
         <LeftContainer valor={props.leftContainer} />
-        <div className='navSection'>
+        <div className="navSection">
           <div className="navContainer">
             <div className="contentWelcome">
               <h2>Welcome to +FOCO</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                convallis neque mauris, at mattis augue consequat non. Maecenas
-                sodales, felis sit amet mattis efficitur, libero tortor convallis
-                enim, ut iaculis justo felis aliquam dolor. Sed vitae finibus magna,
-                in luctus sapien.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas convallis neque mauris, at mattis augue consequat non.
+                Maecenas sodales, felis sit amet mattis efficitur, libero tortor
+                convallis enim, ut iaculis justo felis aliquam dolor. Sed vitae
+                finibus magna, in luctus sapien.
               </p>
             </div>
             <div className="contentNav">
-              <img
-                src={logo}
-                alt="logo"
-              />
+              <img src={logo} alt="logo" />
               <div className="contentNavLine"></div>
               <nav>
                 <a href="#">Reports</a>
@@ -41,7 +38,7 @@ function Home(props: any) {
       </div>
       <Footer />
     </>
-  )
+  );
 }
 
 export default Home;

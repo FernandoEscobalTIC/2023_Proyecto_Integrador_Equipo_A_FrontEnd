@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import React from "react";
-import Logo from "../utils/logo/wide/wideLogo";
+import Logo from "../utils/logo/wide/WideLogo";
 // @ts-ignore
 import twitterLogo from "../../assets/twitter-icon-18-256.png";
 // @ts-ignore
