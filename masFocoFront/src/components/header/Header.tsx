@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "../utils/button/PageNavButton/PageNavButton";
-import NarrowLogo from "../utils/logo/narrow/NarrowLogo";
 import WideLogo from "../utils/logo/wide/WideLogo.js";
 import LoginButton from "../utils/button/AccessButton/AccessButton";
 import "./Header.css";
+import NarrowLogo from "../utils/logo/narrow/narrowLogo";
 
 interface ElementosComunesProps {
   isWide: boolean;
