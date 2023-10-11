@@ -4,29 +4,28 @@ import ventanaRota from "../../../assets/ventana-rota.png";
 // @ts-ignore
 import imagenRemitenteTest from "../../../assets/imagen-remitente.jpeg";
 import "./Report.css";
-const nombreRemitenteTest = "Bruno Avellaneda";
 function UrgencyLevel(props: any) {
-  const urgency = props.urgency;
-  switch (urgency) {
-    case 1:
+  const prioridad = props.prioridad;
+  switch (prioridad) {
+    case "Low":
       return (
         <div className="low-urgency-box">
           <p className="urgency-span">Low</p>
         </div>
       );
-    case 2:
+    case "Medium":
       return (
         <div className="medium-urgency-box">
           <p className="urgency-span">Medium</p>
         </div>
       );
-    case 3:
+    case "High":
       return (
         <div className="high-urgency-box">
           <p className="urgency-span">High</p>
         </div>
       );
-    case 4:
+    case "Critical":
       return (
         <div className="critical-urgency-box">
           <p className="urgency-span">CRITICAL</p>
@@ -34,26 +33,35 @@ function UrgencyLevel(props: any) {
       );
   }
 }
+
+//  <Report
+//    titulo={report.titulo}
+//    descripcion={report.descripcion}
+//    prioridad={report.prioridad}
+//    usuario={report.usuario}
+//   />
+
 const Report = (props: any) => {
-  const urgency = props.urgency;
-  const nombreRemitente = props.nombreRemitente;
-  const imagenRemitente = props.imagenRemitente;
+  const prioridad = props.prioridad;
+  const titulo = props.titulo;
+  const descripcion = props.descripcion;
+  const usuario = props.usuario;
   return (
     <div className="card">
       <div className="img">
         <div className="remitente">
           <img src={imagenRemitenteTest} alt="Imagen del remitente" />
-          <p>{nombreRemitenteTest}</p>
+          <p>{usuario}</p>
         </div>
         <img src={ventanaRota} alt="Ventana Rota" />
       </div>
 
       <div className="card-content">
         <div className="card-text">
-          <h3>Ventana rota</h3>
-          <p>Ventana que da al patio rota por balonazo en 3ro A</p>
+          <h3>{titulo}</h3>
+          <p>{descripcion}</p>
         </div>
-        <UrgencyLevel urgency={urgency} />
+        <UrgencyLevel prioridad={prioridad} />
       </div>
     </div>
   );
